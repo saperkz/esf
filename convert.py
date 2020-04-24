@@ -6,10 +6,9 @@ Created on Mon Apr 20 12:47:15 2020
 """
 import glob
 from OpenSSL import crypto
-print('Input password: ')
-passwd = input()
 
 
+passwd = input('Input password: ')
 
 #====AUTH certificate export to PEM=============
 find_orig_certname_auth=glob.glob("AUTH_*")
