@@ -8,8 +8,8 @@ import glob
 from OpenSSL import crypto
 
 
-passwd = input('Input password: ')
-
+inp_passwd = input('Input password: ')
+passwd = inp_passwd.encode()
 #====AUTH certificate export to PEM=============
 find_orig_certname_auth=glob.glob("AUTH_*")
 p12_auth=open(*find_orig_certname_auth, "rb") 
