@@ -1,15 +1,20 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 20 12:47:15 2020
+# ***************************
+# App: ConverP12
+# Description: Converts all certificates in folder with name "AUTH..." and "RSA..." also shows "issued to"
+# Date: 03.04.2020
+# Author: Olzhas Omarov
+# Python version: 3.8
+# Compatibility: Any
+# Email: ooskenesary@gmail.com
+# ***************************
 
-@author: Admin
-"""
 import glob
 from OpenSSL import crypto
 
 
 inp_passwd = input('Input password: ')
 passwd = inp_passwd.encode()
+
 #====AUTH certificate export to PEM=============
 find_orig_certname_auth=glob.glob("AUTH_*")
 p12_auth=open(*find_orig_certname_auth, "rb") 
